@@ -12,16 +12,8 @@ class ContainerView1: UIViewController {
 
     @IBOutlet weak var scrollView1: UIScrollView!
     
-    var gambar1 = UIImageView()
-    var gambar2 = UIImageView()
-    var gambar3 = UIImageView()
-    var gambar4 = UIImageView()
-    var gambar5 = UIImageView()
-    var gambar6 = UIImageView()
-    var gambar7 = UIImageView()
-    var gambar8 = UIImageView()
-    var gambar9 = UIImageView()
-    var gambar10 = UIImageView()
+    let posterFilm = ["batman", "belko_", "hangover", "harryPotter", "nacho_libre", "pirates", "spectre", "starTrek", "thor", "xmen"]
+    var imageViews = [UIImageView]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,50 +24,24 @@ class ContainerView1: UIViewController {
         
         let ukuranXgambar = 19
         let ukuranYgambar = 19
-        gambar1 = UIImageView.init(frame: CGRect(x: ukuranXgambar, y:ukuranYgambar, width: 93, height: 128))
-        gambar2 = UIImageView.init(frame: CGRect(x: Int(gambar1.frame.origin.x)+Int(gambar1.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar3 = UIImageView.init(frame: CGRect(x: Int(gambar2.frame.origin.x)+Int(gambar2.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar4 = UIImageView.init(frame: CGRect(x: Int(gambar3.frame.origin.x)+Int(gambar3.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar5 = UIImageView.init(frame: CGRect(x: Int(gambar4.frame.origin.x)+Int(gambar4.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar6 = UIImageView.init(frame: CGRect(x: Int(gambar5.frame.origin.x)+Int(gambar5.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar7 = UIImageView.init(frame: CGRect(x: Int(gambar6.frame.origin.x)+Int(gambar6.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar8 = UIImageView.init(frame: CGRect(x: Int(gambar7.frame.origin.x)+Int(gambar7.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar9 = UIImageView.init(frame: CGRect(x: Int(gambar8.frame.origin.x)+Int(gambar8.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
-        gambar10 = UIImageView.init(frame: CGRect(x: Int(gambar9.frame.origin.x)+Int(gambar9.frame.size.width), y:ukuranYgambar, width: 93, height: 128))
+        let imageWidth = 93
+        let imageHeight = 128
         
-        gambar1.image = UIImage(named: "batman")
-        gambar1.contentMode = .scaleAspectFit
-        gambar2.image = UIImage(named: "belko_")
-        gambar2.contentMode = .scaleAspectFit
-        gambar3.image = UIImage(named: "hangover")
-        gambar3.contentMode = .scaleAspectFit
-        gambar4.image = UIImage(named: "harryPotter")
-        gambar4.contentMode = .scaleAspectFit
-        gambar5.image = UIImage(named: "nacho_libre")
-        gambar5.contentMode = .scaleAspectFit
-        gambar6.image = UIImage(named: "pirates")
-        gambar6.contentMode = .scaleAspectFit
-        gambar7.image = UIImage(named: "spectre")
-        gambar7.contentMode = .scaleAspectFit
-        gambar8.image = UIImage(named: "starTrek")
-        gambar8.contentMode = .scaleAspectFit
-        gambar9.image = UIImage(named: "thor")
-        gambar9.contentMode = .scaleAspectFit
-        gambar10.image = UIImage(named: "xmen")
-        gambar10.contentMode = .scaleAspectFit
+        var curr_imageView = UIImageView()
+        for i in 0 ..< posterFilm.count {
+            if imageViews.isEmpty {
+                curr_imageView = UIImageView.init(frame: CGRect(x: ukuranXgambar, y:ukuranYgambar, width: imageWidth, height: imageHeight))
+            } else {
+                curr_imageView = UIImageView.init(frame: CGRect(x: Int(imageViews[i-1].frame.origin.x)+Int(imageViews[i-1].frame.size.width), y:ukuranYgambar, width: imageWidth, height: imageHeight))
+            }
+            
+            curr_imageView.image = UIImage(named: posterFilm[i])
+            curr_imageView.contentMode = .scaleAspectFit
+            self.scrollView1.addSubview(curr_imageView)
+            imageViews.append(curr_imageView)
+        }
         
-        self.scrollView1.addSubview(gambar1)
-        self.scrollView1.addSubview(gambar2)
-        self.scrollView1.addSubview(gambar3)
-        self.scrollView1.addSubview(gambar4)
-        self.scrollView1.addSubview(gambar5)
-        self.scrollView1.addSubview(gambar6)
-        self.scrollView1.addSubview(gambar7)
-        self.scrollView1.addSubview(gambar8)
-        self.scrollView1.addSubview(gambar9)
-        self.scrollView1.addSubview(gambar10)
-        
-        self.scrollView1.contentSize = CGSize(width: gambar10.frame.size.width+gambar10.frame.origin.x+CGFloat(ukuranXgambar), height: self.scrollView1.frame.size.height)
+        self.scrollView1.contentSize = CGSize(width: imageViews[imageViews.count-1].frame.size.width+imageViews[imageViews.count-1].frame.origin.x+CGFloat(ukuranXgambar), height: self.scrollView1.frame.size.height)
         
     }
 

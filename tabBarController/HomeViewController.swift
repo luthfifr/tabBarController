@@ -59,12 +59,21 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.darkGray
-        scrollView.frame = CGRect(x:0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        scrollView.isScrollEnabled = true
-        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height+container4.frame.size.height+(container4.frame.origin.y - container3.frame.origin.y))
+        self.scrollView.isScrollEnabled = true
+        //self.scrollView.frame = CGRect(x:0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: container4.frame.origin.y + container4.frame.size.height + self.view.frame.size.height)
         
         //cek childviewcontroller
         print(childViewControllers.count)
+        print(scrollView.frame.size)
+        print(scrollView.contentSize)
+        
+        var totalFrameSize = CGRect()
+        for view in scrollView.subviews {
+            totalFrameSize = totalFrameSize.union(view.frame)
+        }
+        print(totalFrameSize)
+        //scrollView.contentSize = CGSize(width: totalFrameSize.size.width, height: totalFrameSize.size.height+(self.tabBarController?.tabBar.frame.size.height)!)
         
     }
 

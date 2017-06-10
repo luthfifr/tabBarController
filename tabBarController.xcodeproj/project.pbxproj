@@ -18,6 +18,8 @@
 		CFB298421EEA1A6B00CA860B /* ContainerView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB2983D1EEA1A6B00CA860B /* ContainerView3.swift */; };
 		CFB298431EEA1A6B00CA860B /* ContainerView4.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB2983E1EEA1A6B00CA860B /* ContainerView4.swift */; };
 		CFB298441EEA1A6B00CA860B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB2983F1EEA1A6B00CA860B /* HomeViewController.swift */; };
+		CFB298461EEA239400CA860B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB298451EEA239400CA860B /* SearchViewController.swift */; };
+		CFB2984C1EEB7E6A00CA860B /* MoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB2984B1EEB7E6A00CA860B /* MoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		CFB2983D1EEA1A6B00CA860B /* ContainerView3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView3.swift; sourceTree = "<group>"; };
 		CFB2983E1EEA1A6B00CA860B /* ContainerView4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView4.swift; sourceTree = "<group>"; };
 		CFB2983F1EEA1A6B00CA860B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CFB298451EEA239400CA860B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		CFB2984B1EEB7E6A00CA860B /* MoreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +109,14 @@
 		CFB298081EE9B4F900CA860B /* tabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				CFB298091EE9B4F900CA860B /* AppDelegate.swift */,
 				CFB2983F1EEA1A6B00CA860B /* HomeViewController.swift */,
 				CFB2983B1EEA1A6B00CA860B /* ContainerView1.swift */,
 				CFB2983C1EEA1A6B00CA860B /* ContainerView2.swift */,
 				CFB2983D1EEA1A6B00CA860B /* ContainerView3.swift */,
 				CFB2983E1EEA1A6B00CA860B /* ContainerView4.swift */,
-				CFB298091EE9B4F900CA860B /* AppDelegate.swift */,
+				CFB298451EEA239400CA860B /* SearchViewController.swift */,
+				CFB2984B1EEB7E6A00CA860B /* MoreTableViewController.swift */,
 				CFB2980F1EE9B4F900CA860B /* Main.storyboard */,
 				CFB298121EE9B4F900CA860B /* Assets.xcassets */,
 				CFB298141EE9B4F900CA860B /* LaunchScreen.storyboard */,
@@ -275,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFB298421EEA1A6B00CA860B /* ContainerView3.swift in Sources */,
+				CFB298461EEA239400CA860B /* SearchViewController.swift in Sources */,
+				CFB2984C1EEB7E6A00CA860B /* MoreTableViewController.swift in Sources */,
 				CFB298401EEA1A6B00CA860B /* ContainerView1.swift in Sources */,
 				CFB2980A1EE9B4F900CA860B /* AppDelegate.swift in Sources */,
 				CFB298411EEA1A6B00CA860B /* ContainerView2.swift in Sources */,
