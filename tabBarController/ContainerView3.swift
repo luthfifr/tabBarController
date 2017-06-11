@@ -13,6 +13,8 @@ class ContainerView3: UIViewController {
     @IBOutlet weak var scrollView3: UIScrollView!
     
     let posterFilm = ["batman", "belko_", "hangover", "harryPotter", "nacho_libre", "pirates", "spectre", "starTrek", "thor", "xmen"]
+    let filmJudul = ["The Dark Knight", "The Belko Experiment", "Hangover", "Harry Potter and The Order of Phoenix", "Nacho Libre", "Pirates of The Carribean: Dead Men Tell No Tale", "Spectre", "Star Trek", "Thor", "X-Men Apocalypse"]
+    let filmHarga = ["25000", "22000", "30000", "27000", "20000", "35000", "30000", "28000", "26000", "27000"]
     var imageViews = [UIImageView]()
     
     override func viewDidLoad() {
@@ -35,10 +37,15 @@ class ContainerView3: UIViewController {
                 curr_imageView = UIImageView.init(frame: CGRect(x: Int(imageViews[i-1].frame.origin.x)+Int(imageViews[i-1].frame.size.width), y:ukuranYgambar, width: imageWidth, height: imageHeight))
             }
             
+            curr_imageView.tag = i
             curr_imageView.image = UIImage(named: posterFilm[i])
             curr_imageView.contentMode = .scaleAspectFit
-            self.scrollView3.addSubview(curr_imageView)
             imageViews.append(curr_imageView)
+            let singleTap = UITapGestureRecognizer(target: self, action: #selector(ContainerView1.imageTapped))
+            singleTap.numberOfTapsRequired = 1
+            curr_imageView.isUserInteractionEnabled = true
+            curr_imageView.addGestureRecognizer(singleTap)
+            self.scrollView3.addSubview(curr_imageView)
         }
         
         self.scrollView3.contentSize = CGSize(width: imageViews[imageViews.count-1].frame.size.width+imageViews[imageViews.count-1].frame.origin.x+CGFloat(ukuranXgambar), height: self.scrollView3.frame.size.height)
@@ -49,7 +56,18 @@ class ContainerView3: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func imageTapped(_ sender: UITapGestureRecognizer) {
+        let senderTag = sender.view?.tag
+        let senderFimJudul = self.filmJudul[senderTag!]
+        let senderFilmHarga = self.filmHarga[senderTag!]
+        
+        let alertStatus = UIAlertController (title: "Tambahkan Ke Keranjang Belanja", message: "Judul Film: \(senderFimJudul)\nHarga Sewa: Rp \(senderFilmHarga)", preferredStyle: UIAlertControllerStyle.alert)
+        alertStatus.addAction(UIAlertAction(title: "Ya", style: UIAlertActionStyle.default,handler: {(action) in
+            
+        }))
+        alertStatus.addAction(UIAlertAction(title: "Tidak", style: UIAlertActionStyle.destructive, handler: nil))
+        self.present(alertStatus, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
