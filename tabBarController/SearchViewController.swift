@@ -14,7 +14,7 @@ class SearchViewController: UITableViewController, UISearchBarDelegate, UISearch
     var TempTableData:Array<String> = Array <String>()
     var filteredTableData = [String]()
     var resultSearchController = UISearchController()
-    let posterFilm = ["batman", "belko_", "hangover", "harryPotter", "nacho_libre", "pirates", "spectre", "starTrek", "thor", "xmen"]
+    let filmJudul = ["The Dark Knight", "The Belko Experiment", "Hangover", "Harry Potter and The Order of Phoenix", "Nacho Libre", "Pirates of The Carribean: Dead Men Tell No Tale", "Spectre", "Star Trek", "Thor", "X-Men Apocalypse"]
     
     @IBOutlet weak var emptyView: UIView!
     
@@ -22,7 +22,7 @@ class SearchViewController: UITableViewController, UISearchBarDelegate, UISearch
         super.viewDidLoad()
         emptyView.isHidden = true
         
-        TableData = posterFilm
+        TableData = filmJudul
         TempTableData = TableData
         
         self.resultSearchController = ({
@@ -158,7 +158,7 @@ class SearchViewController: UITableViewController, UISearchBarDelegate, UISearch
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let SBText = removeSpecialCharsFromString(text: searchBar.text!)
+        //let SBText = removeSpecialCharsFromString(text: searchBar.text!)
         searchBar.autocapitalizationType = .none
         searchBar.autocorrectionType = .no
     }
