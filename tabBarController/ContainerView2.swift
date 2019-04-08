@@ -61,11 +61,11 @@ class ContainerView2: UIViewController {
         let senderFimJudul = self.filmJudul[senderTag!]
         let senderFilmHarga = self.filmHarga[senderTag!]
         
-        let alertStatus = UIAlertController (title: "Tambahkan Ke Keranjang Belanja", message: "Judul Film: \(senderFimJudul)\nHarga Sewa: Rp \(senderFilmHarga)", preferredStyle: UIAlertControllerStyle.alert)
-        alertStatus.addAction(UIAlertAction(title: "Ya", style: UIAlertActionStyle.default,handler: {(action) in
+        let alertStatus = UIAlertController (title: "Tambahkan Ke Keranjang Belanja", message: "Judul Film: \(senderFimJudul)\nHarga Sewa: Rp \(senderFilmHarga)", preferredStyle: UIAlertController.Style.alert)
+        alertStatus.addAction(UIAlertAction(title: "Ya", style: UIAlertAction.Style.default,handler: {(action) in
             
         }))
-        alertStatus.addAction(UIAlertAction(title: "Tidak", style: UIAlertActionStyle.destructive, handler: nil))
+        alertStatus.addAction(UIAlertAction(title: "Tidak", style: UIAlertAction.Style.destructive, handler: nil))
         self.present(alertStatus, animated: true, completion: nil)
     }
 

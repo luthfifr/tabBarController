@@ -64,7 +64,7 @@ class HomeViewController: UIViewController {
         self.scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: container4.frame.origin.y + container4.frame.size.height + self.view.frame.size.height)
         
         //cek childviewcontroller
-        print(childViewControllers.count)
+        print(children.count)
         print(scrollView.frame.size)
         print(scrollView.contentSize)
         

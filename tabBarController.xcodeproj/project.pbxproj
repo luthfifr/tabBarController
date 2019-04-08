@@ -212,17 +212,20 @@
 					CFB298051EE9B4F900CA860B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2L6QV2N95T;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					CFB2981B1EE9B4F900CA860B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2L6QV2N95T;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CFB298051EE9B4F900CA860B;
 					};
 					CFB298261EE9B4F900CA860B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2L6QV2N95T;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CFB298051EE9B4F900CA860B;
 					};
@@ -444,7 +447,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luthfifathurrahman.tabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -457,7 +461,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luthfifathurrahman.tabBarController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -471,7 +476,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luthfifathurrahman.tabBarControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tabBarController.app/tabBarController";
 			};
 			name = Debug;
@@ -486,7 +492,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luthfifathurrahman.tabBarControllerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tabBarController.app/tabBarController";
 			};
 			name = Release;
@@ -500,7 +507,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luthfifathurrahman.tabBarControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = tabBarController;
 			};
 			name = Debug;
@@ -514,7 +522,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luthfifathurrahman.tabBarControllerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = tabBarController;
 			};
 			name = Release;
@@ -538,6 +547,7 @@
 				CFB298321EE9B4F900CA860B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFB298331EE9B4F900CA860B /* Build configuration list for PBXNativeTarget "tabBarControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +556,7 @@
 				CFB298351EE9B4F900CA860B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CFB298361EE9B4F900CA860B /* Build configuration list for PBXNativeTarget "tabBarControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +565,7 @@
 				CFB298381EE9B4F900CA860B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

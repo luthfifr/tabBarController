@@ -184,9 +184,9 @@ class SearchViewController: UITableViewController, UISearchBarDelegate, UISearch
     func setEmptyViewVisible(visible: Bool) {
         emptyView.isHidden = !visible
         if visible {
-            self.tableView.bringSubview(toFront: emptyView)
+            self.tableView.bringSubviewToFront(emptyView)
         } else {
-            self.tableView.sendSubview(toBack: emptyView)
+            self.tableView.sendSubviewToBack(emptyView)
         }
     }
 }
